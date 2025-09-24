@@ -37,7 +37,7 @@
         }
     </style>
     <title>Game Library</title>
-    <a href="newuser.php">NIEUW ACCOUNT MAKEN</a>
+    <a href="newuser.php">REGISTER</a>
 </head>
 <body>
 <h1>Game Library</h1>

@@ -36,10 +36,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Register</title>
+    <link rel="stylesheet" href="register.css">
 </head>
 <body>
-
     <h2>Register New User</h2>
     <form method="POST" action="">
         <label for="user_email">Email:</label><br>
