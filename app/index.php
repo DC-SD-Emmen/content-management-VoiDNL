@@ -18,6 +18,12 @@
             padding: 10px;
             text-align: left;
         }
+        h1 {
+            color: white;
+            text-align: center;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 50px;
+        }
         h2 {
             color: white;
             text-align: center;
@@ -35,9 +41,33 @@
         button:hover {
             background-color: #45a049;
         }
+        #register-button{
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: blueviolet;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        #login-button{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: blueviolet;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        #register-button:hover, #login-button:hover {
+            background-color: indigo;
+        }
     </style>
     <title>Game Library</title>
-    <a href="newuser.php">REGISTER</a>
+    <a href="newuser.php" id="register-button">REGISTER</a>
+    <a href="login.php" id="login-button">LOGIN</a>
 </head>
 <body>
 <h1>Game Library</h1>
