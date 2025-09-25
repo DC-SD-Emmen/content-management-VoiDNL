@@ -50,6 +50,6 @@
         <input type="password" id="user_password" name="user_password" required><br><br>
         <input type="submit" value="Register">
     </form>
-    
+    <p>Already have an account? <a href="login.php" id="existinguser">Login here</a>.</p>
 </body>
 </html>

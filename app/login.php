@@ -49,5 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <label for="user_password">Password:</label><br>
         <input type="password" id="user_password" name="user_password" required><br><br>
         <input type="submit" value="Login">
+    </form>
+    <p>Don't have an account? <a href="newuser.php" id="newuser">Register here</a>.</p>
 </body>
 </html>
