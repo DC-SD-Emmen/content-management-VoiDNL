@@ -39,9 +39,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    <h2>Login</h2>
+    <h2>LOGIN</h2>
     <form method="POST" action="">
         <label for="user_name">Username:</label><br>
         <input type="text" id="user_name" name="user_name" required><br>
