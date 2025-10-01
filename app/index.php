@@ -1,3 +1,32 @@
+<?php
+
+//start session
+session_start();
+
+//spl autoloader //classes
+spl_autoload_register(function ($class_name) {
+    include 'classes/' . $class_name . '.php';
+});
+
+$database = new Database();
+$gamemanager = new GameManager($database->getConnection());
+$userManager = new UserManager($database->getConnection());
+
+$gamesArray = $gamemanager->getAllGames();
+
+//controleren of SESSION user bestaat
+if (isset($_SESSION['user_name'])) {
+    echo "<h2>Welcome, " . htmlspecialchars($_SESSION['user_name']) . "!</h2>";
+} else {
+    //redirect to login page
+    header("Location: login.php");
+    exit();
+}
+    
+
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -61,32 +90,40 @@
             text-decoration: none;
             border-radius: 5px;
         }
-        #register-button:hover, #login-button:hover {
+        #wishlist-button{
+            position: absolute;
+            top: 20px;
+            left: 175px;
+            padding: 10px 20px;
+            background-color: blueviolet;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        #logout-button{
+            position: absolute;
+            top: 20px;
+            right: 175px;
+            padding: 10px 20px;
+            background-color: blueviolet;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        #register-button:hover, #login-button:hover, #wishlist-button:hover, #logout-button:hover {
             background-color: indigo;
         }
     </style>
     <title>Game Library</title>
     <a href="newuser.php" id="register-button">REGISTER</a>
     <a href="login.php" id="login-button">LOGIN</a>
+    <a href="wishlist.php" id="wishlist-button">WISHLIST</a>
+    <a href="logout.php" id="logout-button">LOGOUT</a>
 </head>
 <body>
 <h1>Game Library</h1>
 
-<?php
 
-//spl autoloader //classes
-spl_autoload_register(function ($class_name) {
-    include 'classes/' . $class_name . '.php';
-});
-
-$database = new Database();
-$gamemanager = new GameManager($database->getConnection());
-$userManager = new UserManager($database->getConnection());
-
-$gamesArray = $gamemanager->getAllGames();
-
-
-?>
 
     <div id="gameGrid">
 

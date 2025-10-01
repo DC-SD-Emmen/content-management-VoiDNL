@@ -63,8 +63,13 @@
         //hier moet nog code komen zodat je de game details op het scherm kan laten zien
         //je kan ook kijken bij index.php hoe je dat daar hebt gedaan
 
+        //add link to 'add to wishlist' page, passing the game id
+        echo "<p><a href='addtowishlist.php?game_id=" . $game->getID() . "'>Add to Wishlist</a></p>";
+
         //back button (go back to index.php)
         echo "<p><a href='index.php'>Back to Game Library</a></p>";
+
+
  
     ?>
     
