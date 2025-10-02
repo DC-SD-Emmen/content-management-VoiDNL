@@ -40,3 +40,12 @@ input[type="submit"] {
     font-weight: bold;
     font-size: 18px;
 }
+@media screen and (max-width: 900px) {
+    form {
+        width: 85%;
+    }
+    input[type="text"], input[type="email"], input[type="password"] {
+        width: 100%;
+    }
+    
+}

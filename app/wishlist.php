@@ -32,9 +32,30 @@
     <title>WISHLIST</title>
     <link rel="stylesheet" href="wishlist.css">
     <h1>WISHLIST</h1>
+    <style>
+        #back-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: red;
+            color: white;
+            padding: 5px 10px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        #back-button:hover {
+            background-color: indigo;
+        }
+        @media screen and (max-width: 600px) {
+            #back-button {
+                padding: 3px 6px;
+                font-size: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
-    
+    <a href="index.php" id="back-button">BACK TO LIBRARY</a>
 </body>
 </html>
 <div id="gameGrid">

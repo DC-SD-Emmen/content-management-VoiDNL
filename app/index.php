@@ -70,26 +70,6 @@ if (isset($_SESSION['user_name'])) {
         button:hover {
             background-color: #45a049;
         }
-        #register-button{
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            padding: 10px 20px;
-            background-color: blueviolet;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        #login-button{
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            padding: 10px 20px;
-            background-color: blueviolet;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
         #wishlist-button{
             position: absolute;
             top: 20px;
@@ -110,20 +90,46 @@ if (isset($_SESSION['user_name'])) {
             text-decoration: none;
             border-radius: 5px;
         }
-        #register-button:hover, #login-button:hover, #wishlist-button:hover, #logout-button:hover {
+        #wishlist-button:hover, #logout-button:hover {
             background-color: indigo;
+        }
+        @media screen and (max-width: 940px) {
+            h1 {
+                font-size: 30px;
+            }
+            #wishlist-button, #logout-button {
+                padding: 5px 10px;
+                font-size: 12px;
+            }
+            #wishlist-button {
+                left: 100px;
+            }
+            #logout-button {
+                right: 100px;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            h1 {
+                font-size: 20px;
+            }
+        #wishlist-button, #logout-button {
+                padding: 3px 6px;
+                font-size: 10px;
+            }
+            #wishlist-button {
+                left: 70px;
+            }
+            #logout-button {
+                right: 70px;
+            }
         }
     </style>
     <title>Game Library</title>
-    <a href="newuser.php" id="register-button">REGISTER</a>
-    <a href="login.php" id="login-button">LOGIN</a>
     <a href="wishlist.php" id="wishlist-button">WISHLIST</a>
     <a href="logout.php" id="logout-button">LOGOUT</a>
 </head>
 <body>
 <h1>Game Library</h1>
-
-
 
     <div id="gameGrid">
 
