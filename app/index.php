@@ -93,6 +93,9 @@ if (isset($_SESSION['user_name'])) {
         #wishlist-button:hover, #logout-button:hover {
             background-color: indigo;
         }
+        .gameCard {
+            background-color: blueviolet;
+        }
         @media screen and (max-width: 940px) {
             h1 {
                 font-size: 30px;
